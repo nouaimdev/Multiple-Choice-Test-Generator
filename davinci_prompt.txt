@@ -1,0 +1,15 @@
+Create Multiple Choice Test with Curie
+______________________________________
+
+Model:
+text-davinci-003
+
+Prompt:
+"Generate 5 multiple choice questions about The Civil War. Each question should have 4 options and one correct answer"
+"Create a multiple choice test on The Civil War. The test should have 10 questions and 4 options for each question"
+
+Max Length:
+200-300 characters per question
+
+Temperature: 0
+

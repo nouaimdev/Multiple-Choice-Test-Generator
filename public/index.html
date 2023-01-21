@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Chat with OpenAI</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" />
+
+	</head>
+	<body>
+		<h1 class="mt-5">Multiple Choice Test Generator</h1>
+		<h2 class="mt-2">Powered by OpenAI</h2>
+		<p class="intro mt-4 px-2">Mit dem Multiple Choice Test Generator lassen sich themenbezogene Tests für den Unterricht in Sekunden erzeugen. Ganz einfach Thema und Informationen zur Lerngruppe angeben, auf "Erstellen" klicken und zurücklehnen. Den erzeugten MC-Test kannst z.B. für Unterrichtsaufgaben, Arbeiten oder einfach als Inspiration nutzen. Viel Spaß beim Ausprobieren!</p>
+		<div class="main row">
+			<div class="col-md-6 col-12">
+				<form class="mt-4 text-left px-2">
+					<div class="form-group row pt-4">
+						<label class="text col-4" style="text-align: left;" for="topic">Thema</label>
+						<input class="col-8" type="text" id="topic" name="topic" placeholder="z.B. Photosynthese">
+					</div>
+					<br>
+					<div class="form-group row">
+						<label class="text col-4" style="text-align: left;" for="subject">Fach</label>
+						<select class="col-8" id="subject" name="subject">
+							<option value="Biologie">Biologie</option>
+							<option value="Chemie">Chemie</option>
+							<option value="Deutsch">Deutsch</option>
+							<option value="Englisch">Englisch</option>
+							<option value="Ethik">Ethik</option>
+							<option value="Informatik">Informatik</option>
+							<option value="Mathematik">Mathematik</option>
+							<option value="Musik">Musik</option>
+							<option value="Philosophie">Philosophie</option>
+							<option value="Physik">Physik</option>
+							<option value="Politik">Politik</option>
+							<option value="Religion">Religion</option>
+							<option value="Sport">Sport</option>
+						</select>
+					<br>
+					</div>
+					<br>
+					<div class="form-group row">
+						<label class="text col-4" style="text-align: left;" for="grade">Klasse</label>
+						<select class="col-8" id="grade" name="grade">
+							<option value="3-4">3. Klasse - 4. Klasse</option>
+							<option value="5-7">5. Klasse - 7. Klasse</option>
+							<option value="8-10">8. Klasse - 10. Klasse</option>
+							<option value="11-13">11. Klasse - 13. Klasse</option>
+						</select>
+					</div>
+					<br>
+					<div class="form-group row">
+						<label class="text col-4" style="text-align: left;" for="number">Anzahl Fragen</label>
+						<select class="col-8" id="number" name="number">
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+					<br><br>
+					<input class="py-3 px-4" id="submit" type="submit" value="Erstellen">
+				</form>
+			</div>
+			<div class="col-md-6 col-12 ps-4">
+				<div class="openai mt-5 p-4 pe-md-5">
+					<!-- <div class="openai_title pb-3">Dein Multiple Choice Test</div> -->
+					<div id="output" class="mb-5"></div>
+				</div>
+			</div>
+		</div>
+		<section id="footer" class="py-4 mt-5">
+			<div class="credits text-center pb-4 ">Entwickelt von <a href="https://noua.im/" target="_blank"><img src="https://noua.im/assets/img/logo/favicon.ico" width="30" height="30"> Nouaim Al Hahbare</a></div>
+		</section>
+		<script src="client.js"></script>
+	</body>
+</html>
